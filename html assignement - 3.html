@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    header {
+      background-color: #B7DDB2;
+      padding: 30px 0;
+      text-align:left;
+      font-size: 35px;
+      color: black;
+      border: 2px solid white;
+    }
+    
+    nav {
+      float: left;
+      width: 30%;
+      height: 500px; 
+      background: #A9A9A9;
+      font-size: 25px;
+      border: 2px solid white;
+    }
+    
+ 
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    article {
+      float: left;
+      width: 70%;
+      background-color: #EDEDEE;
+      height: 500px; 
+      font-size: 25px;
+      border: 2px solid white;
+    }
+    
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    footer {
+      background-color: #B7DDB2;
+      text-align: center;
+      color: black;
+      border: 2px solid white;
+      font-size: 20px;
+    }
+    
+    @media (max-width: 600px) {
+      nav, article {
+        width: 100%;
+        height: auto;
+      }
+    }
+    </style>
+</head>
+<body>
+<header>
+  <h2>This is Web Page Main Title</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><b>Main Menu</b></li>
+      <li>HTML</li>
+      <li>PHP</li>
+      <li>PERL...</li>
+    </ul>
+  </nav>
+  
+  <article>
+    <p>Technical and Managerial Tutorials</p>
+  </article>
+</section>
+
+<footer>
+  <p><b>MySite</b></p>
+</footer>
+
+</body>
+</html>

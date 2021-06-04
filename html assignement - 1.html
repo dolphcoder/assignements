@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            background-color: #99ff99;
+        }
+
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+            color: #003300;
+            text-align: center;
+        }
+
+        table {
+            font-family: verdana;
+            color: white;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: bold;
+            background: linear-gradient(to bottom, #339966 0%, #99ff99 100%);
+            border-collapse: collapse;
+        }
+
+        table.inner {
+            border: 10px
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=number] {
+            width: 50%;
+            padding: 6px 12px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type=submit],
+        input[type=reset] {
+            width: 15%;
+            padding: 8px 12px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Student Registration Form</legend>
+            <table align="center" cellpadding="10">
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" name="FirstName" maxlength="50" placeholder="John" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" name="LastName" maxlength="50" placeholder="Doe" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email ID</td>
+                    <td><input type="email" name="EmailID" maxlength="100" placeholder="abc@xyz.com" required/></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td>
+                        <input type="text" name="MobileNumber" maxlength="10" placeholder="xxxxxxxxxx" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="Gender" value="Male" checked />
+                        Male
+                        <input type="radio" name="Gender" value="Female" />
+                        Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth(DOB)</td>
+                    <td><input type="date" name="DOB" required>
+                <tr>
+                    <td>Address<br /><br /><br /></td>
+                    <td><textarea name="Address" rows="10" cols="50" required></textarea></td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td><input type="text" name="City" maxlength="50" placeholder="Bangalore" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pin Code</td>
+                    <td><input type="Number" name="PinCode" maxlength="6" placeholder="560068" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td><input type="text" name="State" maxlength="50" placeholder="Karnataka" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td><input type="text" name="Country" placeholder="India" required/></td>
+                </tr>
+                <tr>
+                    <td>Hobbies <br /><br /><br /></td>
+                    <td>
+                        <input type="checkbox" name="HobbyDrawing" value="Drawing" />
+                        Drawing
+                        <input type="checkbox" name="HobbySinging" value="Singing" />
+                        Singing
+                        <input type="checkbox" name="HobbyDancing" value="Dancing" />
+                        Dancing
+                        <br />
+                        <input type="checkbox" name="HobbyOther" value="Other">
+                        Others
+                        <input type="text" name="Other_Hobby" maxlength="50" placeholder="Ex- Teaching" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+
+</html>

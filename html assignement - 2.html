@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th  {
+            border: 1px solid black;
+            color: white;
+            background-color: #7ACA3A;
+            padding: 0.5em 5em 0.5em 0;
+        }
+        td  {
+            border-color: black;
+            border-style: solid;
+            border-width: 0 1px 0 1px;
+            padding: 0.5em 5em 0.5em 0;
+        }
+        tr:nth-child(odd)   {
+            background-color: #ECECD8;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Contact Name</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Is Promoted</th>
+        </tr>
+        <tr>
+            <td>Maria Andres</td>
+            <td>Berlin</td>
+            <td><img src="germany.png" alt="Germany"> Germany</td>
+            <td><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>Anna Trujillo</td>
+            <td>Mexico D.F.</td>
+            <td><img src="mexico.png" alt="Mexico"> Mexico</td>
+            <td><input type="checkbox" checked></td>
+        </tr>
+        <tr>
+            <td>Antonio Moreno</td>
+            <td>Mexico D.F.</td>
+            <td><img src="mexico.png" alt="Mexico"> Mexico</td>
+            <td><input type="checkbox"></td>
+        </tr>  
+        <tr>
+            <td>Thomas Hardy</td>
+            <td>London</td>
+            <td><img src="uk.png" alt="UK"> UK</td>
+            <td><input type="checkbox"></td>
+        </tr>
+    </table>
+</body>
+</html>
