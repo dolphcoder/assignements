@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box   {
+            width: 980px;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+            display: block;
+        }
+        .header {
+            color: #ffffff;
+            background-color: #333333;
+            padding-left: 10px;
+        }
+        .header img  {
+            width: 150px;
+            height: 80px;
+        }
+        .navbar ul  {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #666666;
+        }
+        .navbar li  {
+            float: left;
+        }
+        .navbar li a    {
+            display: block;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-right: 1px solid #333333;
+        }
+        p   {
+            color: #666666;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .column-left    {
+            width: 70%;
+            float: left;
+            height: 600px;
+        }
+        .col-l1 {
+            background-color: #E5E5E5;
+            width: 20%;
+            height: 130px;
+            float: left;
+            margin: 0 20px 20px 20px;
+        }
+        .col-l2 {
+            margin: 20px;
+            width: 80%;
+        }
+        .read   {
+            color: orange;
+        }
+        .column-right   {
+            width: 30%;
+            background-color: #E5E5E5;
+            float: left;
+            height: 600px;
+        }
+        hr  {
+            background-color: #666666;
+            margin: 20px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .column-right h3    {
+            margin: 20px;
+        }
+        .column-right ul    {
+            list-style-type: none;
+            margin: 20px;
+            padding: 0;
+        }
+        .column-right li a   {
+            display: block;
+            text-decoration: none;
+            color: orange;
+            padding: 10px 12px
+
+        }
+        .column-right p {
+            margin: 20px;
+        }
+        footer {
+            background-color: #333333;
+            padding-top: 5px;
+            text-align: center;
+            color: white;
+            font-size: 12px;
+            height: 50px;
+            margin-top:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="header"><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"><img src="images/html5.png" alt="html5 logo"></a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Link1</a></li>
+                <li><a href="#">Link2</a></li>
+                <li><a href="#">Link3</a></li>
+                <li><a href="#">Link4</a></li>
+                <li><a href="#">Link5</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="column-left">
+                <div class="row">
+                    <div class="col-l1"></div>
+                    <div class="col-l2">
+                        <h2>This is a Lorem Ipsum Heading</h2>
+                        <p>Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo</p>
+                        <p class="read">Read More></p>
+                    </div>
+                    <hr>
+            </div>
+            <div class="row">
+                <div class="col-l1"></div>
+                <div class="col-l2">
+                    <h2>This is a Lorem Ipsum Heading</h2>
+                    <p>Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo</p>
+                    <p class="read">Read More></p>
+                </div>
+                <hr>
+            </div>
+            <div class="row">
+            <div class="col-l1"></div>
+            <div class="col-l2">
+                <h2>This is a Lorem Ipsum Heading</h2>
+                <p>Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+                    Mauris in erat justo</p>
+                <p class="read">Read More></p>
+            </div>
+            <hr>
+            </div>
+            </div>
+            <div class="column-right">
+                <h3>Sidebar Links</h3>
+                <hr>
+                <ul>
+                    <li><a href="#">Link1</a></li>
+                    <li><a href="#">Link2</a></li>
+                    <li><a href="#">Link3</a></li>
+                    <li><a href="#">Link4</a></li>
+                </ul>
+                <h3>Other Widgets</h3>
+                <hr>
+                <p>Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem 
+                    nibh id elit. Sed non  mauris vitae erat consequat auctor eu in elit.<br>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
+                </div>
+        </div>
+        <footer>
+            <p>Copyright <span class="read">Yoursite</span>. All rights reservered.</p>
+        </footer>
+          
+    </div>
+</body>
+</html>
