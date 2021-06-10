@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+            color: #003300;
+            text-align: center;
+        }
+
+        table {
+            font-family: verdana;
+            color: white;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: bold;
+            background: linear-gradient(to bottom, #339966 0%, #99ff99 100%);
+            border-collapse: collapse;
+        }
+
+        table.inner {
+            border: 10px
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=number] {
+            width: 50%;
+            padding: 6px 12px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type=submit],
+        input[type=reset] {
+            width: 15%;
+            padding: 8px 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="GET" onsubmit="return validate()" >
+        <fieldset>
+            <legend>Student Registration Form</legend>
+            <table align="center" cellpadding="10">
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" name="FirstName" maxlength="50" placeholder="John"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" name="LastName" maxlength="50" placeholder="Doe"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email ID</td>
+                    <td><input type="email" name="EmailID" maxlength="100" placeholder="abc@xyz.com"/></td>
+                </tr>
+                <tr>
+                    <td>Mobile Number</td>
+                    <td>
+                        <input type="tel" name="MobileNumber" maxlength="10" placeholder="xxxxxxxxxx" pattern="[0-9]{10}" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="Gender" value="Male" checked />
+                        Male
+                        <input type="radio" name="Gender" value="Female" />
+                        Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>
+                        <input name="age" type="number"/>
+                    </td>
+                </tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+        <script type="text/javascript">
+        function validate(){
+            var fname = document.getElementsByName("FirstName")[0];
+            var lname = document.getElementsByName("LastName")[0];
+            var email = document.getElementsByName("EmailID")[0];
+            var age = document.getElementsByName("age")[0];
+            console.log(age);
+            var phn = document.getElementsByName("MobileNumber")[0];
+            if(fname.value == ""){
+                alert("First Name is required ")
+                return false;
+            }
+            if(lname.value == ""){
+                alert("Last Name is required ")
+                return false;
+            }
+            if(email.value == ""){
+                alert("Email Id is required ")
+                return false;
+            }
+            if(age.value == ""){
+                alert("Date of Birth is required ")
+                return false;
+            }
+            if(age.value> 110){
+                alert("Age limit exceeded")
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

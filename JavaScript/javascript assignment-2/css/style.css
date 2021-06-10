@@ -1,0 +1,88 @@
+body{
+    background: #1CD8D2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #93EDC7, #1CD8D2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Do Hyeon', sans-serif;
+}
+.card-container{
+    min-height: 600px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: #16172E;
+    box-shadow: 20px 20px 35px #548b92;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-top: 25px;
+}
+.header{
+    background-color: #202137;
+    min-height: 50px;
+    border-radius: 10px;
+    margin: 5px;
+    transform: translateY(10px);
+}
+.title{
+    font-size: 2.3em;
+    text-align: center;
+
+}
+.first{
+    color:#1AFFD5 ;
+}
+.last{
+    color:#ffffff ;
+}
+.fa-calculator{
+    color: #1AFFD5;
+}
+#screen{
+    border: 1px solid  #1AFFD5;
+    min-height: 200px;
+    max-width: 350px;
+    margin: 5px;
+    background: transparent;
+    transform: translateY(10px);
+    color: #FF4D62;
+    text-align: end;
+    font-size: 1.6em;
+}
+.panel{
+    background-color:#202137;
+    max-height: 320px;
+    border-radius: 10px;
+    margin: 5px;
+    transform: translateY(10px);
+}
+.row{
+    height: 60px;
+    display: flex;
+    margin: 5px 0px;
+}
+.col{
+    width: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    border: 1px solid #1AFFD5;
+    background-color: #2b2c3d;
+    font-size: 2.0em;
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    font-family: 'Do Hyeon', sans-serif;
+    transition-duration: .5s;
+}
+button:hover{
+    color: #EDC735;
+    background-color: #50505e;
+}
+button:active{
+    transform: translateY(5%);
+}
+#equals{
+    background-color: #1AFFD5;
+}
