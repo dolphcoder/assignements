@@ -1,0 +1,51 @@
+{% extends 'users/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-8 offset-md-2 infinite-container">
+    {% for post in posts %}
+    <article class="media content-section infinite-item">
+      <img class="rounded-circle article-img" src="{{post.author.profile.image.url}}" alt="user_profile_pic">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a class="mr-2" href="#">{{ post.author }}</a>
+          <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+        </div>
+        <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+        <p class="article-content">{{ post.description }}</p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+{% if page_obj.has_next %}
+<a class="infinite-more-link" href="?page={{ page_obj.next_page_number }}"></a>
+{% endif %}
+<div class="d-flex justify-content-center" style="display:none;">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'js/infinite.min.js' %}"></script>
+<script>
+  var infinite = new Waypoint.Infinite({
+    element: $('.infinite-container')[0],
+    handler: function (direction) {
+
+    },
+    offset: 'bottom-in-view',
+    onBeforePageLoad: function () {
+      $('.spinner-border').show();
+    },
+    onAfterPageLoad: function () {
+      $('.spinner-border').hide();
+    }
+
+
+  });
+</script>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'users/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="mr-2" href="#">{{ object.author }}</a>
+                    <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+                    <a href="#" id="like" name='{{object.id}}'><i class="fas fa-heart float-right text-danger"></i></a>
+                    <small id="likes_count" class="text-danger float-right mr-2">{{ object.likes.count }}</small>
+                    <div>
+                        {% if object.author == user %}
+                        <a href="{% url 'post-delete' object.id %}"><i class="fas fa-trash text-danger"></i></a>
+                        <a href="{% url 'post-update' object.id %}"><i class="fas fa-pen text-info mr-3"></i></a>
+                        {% endif %}
+                    </div>
+                </div>
+                <h2 class="article-title">{{ object.title }}</h2>
+                {% if object.featured_image %}
+                <img class="img-fluid" src="{{ object.featured_image.url }}" alt="featured_image">
+                {% endif %}
+                <p class="article-content">{{ object.content }}</p>
+            </div>
+        </article>
+    </div>
+</div>
+
+<script>
+  $('#like').click(function(e){
+      e.preventDefault();
+        $.ajax({
+                 type: "POST",
+                 url: "{% url 'like' %}",
+                 data: {
+                   postid: $(this).attr('name'), 
+                   csrfmiddlewaretoken: '{{ csrf_token }}'
+                  },
+                 dataType: "json",
+                 success: function(json) {
+                        document.getElementById('likes_count').innerHTML = json['result']
+                        console.log(json)
+                  },
+                  error: function(rs, e) {
+                         alert(rs);
+                  }
+            }); 
+      })
+  </script>
+{% endblock %}
