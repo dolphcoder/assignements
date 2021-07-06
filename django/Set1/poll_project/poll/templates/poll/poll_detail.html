@@ -1,0 +1,20 @@
+{% extends "poll/base.html" %}
+
+{% block content %}
+<div class="card" style="width: 48rem;">
+    <div class="card-header">
+    <h3 class="card-title">Poll Results</h3>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{poll.question}}</h5>
+        <ul class="list-group">
+            <li class="list-group-item">{{poll.option_one}} &mdash; <strong>{{poll.option_one_count}}</strong></li>
+            <li class="list-group-item">{{poll.option_two}} &mdash; <strong>{{poll.option_two_count}}</strong></li>
+            <li class="list-group-item">{{poll.option_three}} &mdash; <strong>{{poll.option_three_count}}</strong></li>
+        </ul>
+    </div>
+    <div class="card-footer">
+    <h6 class="card-title">Total &mdash; <strong>{{poll.total}}</strong></h6>
+    </div>
+</div>
+{% endblock %}
